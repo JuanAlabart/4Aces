@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consultas | 4 Aces Data Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Menú superior -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button id="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+      <a href="inicio.html">
+        <img src="logos/logo.png" alt="Logo" class="logo-mini" />
+      </a>
+    </div>
+  </header>
+
+  <!-- Menú lateral -->
+  <nav id="sidebar" class="sidebar">
+    <ul>
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="trabajos.html">Trabajos</a></li>
+      <li><a href="equipo.html">Equipo</a></li>
+      <li><a href="consultas.html">Consultas</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal -->
+
+
+    <section class="consulta">
+      <div class="consulta-container">
+        <!-- Columna izquierda: Formulario -->
+        <div class="consulta-form">
+          <h2>Envíanos tu consulta</h2>
+          <form>
+            <input type="text" placeholder="Tu nombre" required />
+            <input type="email" placeholder="Tu correo electrónico" required />
+            <textarea placeholder="Escribe tu mensaje..." rows="6" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+
+        <!-- Columna derecha: Explicación o imagen -->
+        <div class="consulta-info">
+          <h3>¿Cómo podemos ayudarte?</h3>
+          <p>
+            Si tienes alguna duda o necesitas más información sobre nuestros servicios, no dudes en escribirnos. Nuestro equipo estará encantado de ayudarte.
+          </p>
+          <img src="img/consulta.jpg" alt="Consulta" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Chatbot -->
+  <div id="chatbot-popup" class="chatbot">
+    <div class="chatbot-header">
+      <h3>Chatbot</h3>
+      <button id="close-chatbot" aria-label="Cerrar chatbot">✖</button>
+    </div>
+    <div class="chatbot-messages">
+      <div class="message bot">¡Hola! ¿En qué puedo ayudarte?</div>
+    </div>
+    <form id="chatbot-form">
+      <input
+        type="text"
+        id="chatbot-input"
+        placeholder="Escribe tu mensaje..."
+        autocomplete="off"
+      />
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+  <button id="chatbot-button" aria-label="Abrir chatbot">💬</button>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

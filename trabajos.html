@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabajos | 4 Aces Data Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Menú superior -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button id="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+      <a href="inicio.html">
+        <img src="logos/logo.png" alt="Logo" class="logo-mini" />
+      </a>
+    </div>
+  </header>
+
+  <!-- Menú lateral -->
+  <nav id="sidebar" class="sidebar">
+    <ul>
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="trabajos.html">Trabajos</a></li>
+      <li><a href="equipo.html">Equipo</a></li>
+      <li><a href="consultas.html">Consultas</a></li>
+    </ul>
+  </nav>
+
+  
+<!-- Contenido principal -->
+<main class="container">
+    <section class="trabajos">
+      <h1>📊 Trabajos Realizados</h1>
+      <p>Estos son algunos de los proyectos en los que trabajamos recientemente:</p>
+  
+      <!-- Informe de Gasoil -->
+      <div class="card">
+        <h3>Informe de Gasoil</h3>
+        <button class="toggle-card down" aria-label="Expandir"></button>
+        <div class="card-content">
+          <div class="carousel">
+            <div class="carousel-track">
+              <a href="#img1">
+                <img src="trabajo/portada-gasoil.png" alt="portada" class="imagen-proyecto" loading="lazy" />
+              </a>
+              <a href="#img2">
+                <img src="trabajo/gral-gasoil.png" alt="general gasoil" class="imagen-proyecto" loading="lazy" />
+              </a>
+              <a href="#img3">
+                <img src="trabajo/xpredio-gasoil.png" alt="consumo predio" class="imagen-proyecto" loading="lazy" />
+              </a>
+              <a href="#img4">
+                <img src="trabajo/consumoxcoche-gasoil.png" alt="consumo por coche" class="imagen-proyecto" loading="lazy" />
+              </a>
+            </div>
+          </div>
+          <p>Como equipo de análisis de datos en una importante empresa de transporte urbano, nos encargamos de desarrollar informes mensuales sobre el consumo de gasoil. Utilizamos Power BI para visualizar métricas clave como:</p>
+          <ul>
+            <li>Litros totales</li>
+            <li>Promedios, medianas y desviaciones estándar</li>
+            <li>Tipos de combustible</li>
+            <li>Patrones de consumo por día y predio</li>
+          </ul>
+          <p>Además, diseñamos banners visuales para redes sociales con el objetivo de comunicar los resultados de forma clara y accesible. Esto fortalece la transparencia y la toma de decisiones operativas.</p>
+        </div>
+      </div>
+  
+      <!-- Lightbox para las imágenes del Informe de Gasoil -->
+      <div id="img1" class="lightbox">
+        <a href="#img4" class="prev-lightbox lightbox-btn">&#10094;</a>
+        <img src="trabajo/portada-gasoil.png" alt="portada" />
+        <a href="#img2" class="next-lightbox lightbox-btn">&#10095;</a>
+      </div>
+      <div id="img2" class="lightbox">
+        <a href="#img1" class="prev-lightbox lightbox-btn">&#10094;</a>
+        <img src="trabajo/gral-gasoil.png" alt="general gasoil" />
+        <a href="#img3" class="next-lightbox lightbox-btn">&#10095;</a>
+      </div>
+      <div id="img3" class="lightbox">
+        <a href="#img2" class="prev-lightbox lightbox-btn">&#10094;</a>
+        <img src="trabajo/xpredio-gasoil.png" alt="consumo predio" />
+        <a href="#img4" class="next-lightbox lightbox-btn">&#10095;</a>
+      </div>
+      <div id="img4" class="lightbox">
+        <a href="#img3" class="prev-lightbox lightbox-btn">&#10094;</a>
+        <img src="trabajo/consumoxcoche-gasoil.png" alt="consumo por coche" />
+        <a href="#img1" class="next-lightbox lightbox-btn">&#10095;</a>
+      </div>
+  
+      <!-- Informe de Pañol y Stock -->
+      <div class="card">
+        <h3>Informe de Pañol y Stock</h3>
+        <button class="toggle-card down" aria-label="Expandir"></button>
+        <div class="card-content">
+          <div class="carousel">
+            <div class="carousel-track">
+              <a href="#img5">
+                <img src="trabajo/gral-pañol.jpg" alt="gral-pañol" class="imagen-proyecto" loading="lazy" />
+              </a>
+              <a href="#img6">
+                <img src="trabajo/deposito-pañol.jpg" alt="deposito-pañol" class="imagen-proyecto" loading="lazy" />
+              </a>
+            </div>
+          </div>
+          <p>Aplicamos modelos de predicción para identificar patrones de consumo de combustible y detectar desvíos en el uso de recursos.</p>
+        </div>
+      </div>
+  
+      <!-- Lightbox para las imágenes del Informe de Pañol y Stock -->
+      <div id="img5" class="lightbox">
+        <a href="#img6" class="prev-lightbox lightbox-btn">&#10094;</a>
+        <img src="trabajo/gral-pañol.jpg" alt="gral-pañol" />
+        <a href="#img6" class="next-lightbox lightbox-btn">&#10095;</a>
+      </div>
+      <div id="img6" class="lightbox">
+        <a href="#img5" class="prev-lightbox lightbox-btn">&#10094;</a>
+        <img src="trabajo/deposito-pañol.jpg" alt="deposito-pañol" />
+        <a href="#img5" class="next-lightbox lightbox-btn">&#10095;</a>
+      </div>
+  
+      <!-- Reportes Automatizados -->
+      <div class="card">
+        <h3>Reportes Automatizados</h3>
+        <button class="toggle-card down" aria-label="Expandir"></button>
+        <div class="card-content">
+          <p>Implementamos pipelines de datos para generar reportes diarios de rendimiento operativo en Python y SQL.</p>
+        </div>
+      </div>
+  
+      <!-- Análisis de Incidentes -->
+      <div class="card">
+        <h3>Análisis de Incidentes</h3>
+        <button class="toggle-card down" aria-label="Expandir"></button>
+        <div class="card-content">
+          <p>Diseñamos una base de datos dinámica para clasificar y visualizar incidentes técnicos por frecuencia, tipo y unidad.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Chatbot -->
+  <div id="chatbot-popup" class="chatbot">
+    <div class="chatbot-header">
+      <h3>Chatbot</h3>
+      <button id="close-chatbot" aria-label="Cerrar chatbot">✖</button>
+    </div>
+    <div class="chatbot-messages">
+      <div class="message bot">¡Hola! ¿En qué puedo ayudarte?</div>
+    </div>
+    <form id="chatbot-form">
+      <input
+        type="text"
+        id="chatbot-input"
+        placeholder="Escribe tu mensaje..."
+        autocomplete="off"
+      />
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+  <button id="chatbot-button" aria-label="Abrir chatbot">💬</button>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

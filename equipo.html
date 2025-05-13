@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equipo | 4 Aces Data Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Menú superior -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button id="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+      <a href="inicio.html">
+        <img src="logos/logo.png" alt="Logo" class="logo-mini" />
+      </a>
+    </div>
+  </header>
+
+  <!-- Menú lateral -->
+  <nav id="sidebar" class="sidebar">
+    <ul>
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="trabajos.html">Trabajos</a></li>
+      <li><a href="equipo.html">Equipo</a></li>
+      <li><a href="consultas.html">Consultas</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="container">
+    <section class="equipo">
+      <h1>👥 Nuestro Equipo</h1>
+      <p>Conocé a los profesionales detrás de 4 Aces Data Solutions:</p>
+
+      <div class="equipo-grid">
+        <div class="card">
+          <img src="img/ace1.jpg" alt="Ace #1" />
+          <h3>Ace #1 - Análisis de Datos</h3>
+          <p>Especialista en Power BI, Python y optimización de procesos operativos.</p>
+        </div>
+
+        <div class="card">
+          <img src="img/ace2.jpg" alt="Ace #2" />
+          <h3>Ace #2 - Desarrollo Web</h3>
+          <p>Responsable del diseño responsivo y funcionalidad de plataformas online.</p>
+        </div>
+
+        <div class="card">
+          <img src="img/ace3.jpg" alt="Ace #3" />
+          <h3>Ace #3 - Automatización</h3>
+          <p>Experto en automatización de reportes y extracción de datos.</p>
+        </div>
+
+        <div class="card">
+          <img src="img/ace4.jpg" alt="Ace #4" />
+          <h3>Ace #4 - Soporte y Control</h3>
+          <p>Encargado del control de calidad, soporte técnico y seguimiento de métricas.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Chatbot -->
+  <div id="chatbot-popup" class="chatbot">
+    <div class="chatbot-header">
+      <h3>Chatbot</h3>
+      <button id="close-chatbot" aria-label="Cerrar chatbot">✖</button>
+    </div>
+    <div class="chatbot-messages">
+      <div class="message bot">¡Hola! ¿En qué puedo ayudarte?</div>
+    </div>
+    <form id="chatbot-form">
+      <input
+        type="text"
+        id="chatbot-input"
+        placeholder="Escribe tu mensaje..."
+        autocomplete="off"
+      />
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+  <button id="chatbot-button" aria-label="Abrir chatbot">💬</button>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
