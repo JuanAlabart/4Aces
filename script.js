@@ -23,14 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const chatbotInput = document.getElementById('chatbot-input');
   const chatbotMessages = document.querySelector('.chatbot-messages');
 
-  // Abrir el popup
+  // Abrir o cerrar el popup al hacer clic en el botón del chatbot
   chatbotButton.addEventListener('click', () => {
-    chatbotPopup.style.display = 'flex';
+    if (chatbotPopup.classList.contains('open')) {
+      chatbotPopup.classList.remove('open');
+    } else {
+      chatbotPopup.classList.add('open');
+    }
   });
 
-  // Cerrar el popup
+  // Cerrar el popup al hacer clic en el botón de cierre (X)
   closeChatbot.addEventListener('click', () => {
-    chatbotPopup.style.display = 'none';
+    chatbotPopup.classList.remove('open');
   });
 
   // Enviar mensaje
