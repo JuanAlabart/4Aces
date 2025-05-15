@@ -24,11 +24,18 @@ Esta página fue desarrollada como presentación de nuestro equipo. Aquí vas a 
 
 Podés acceder directamente desde GitHub Pages o descargar el código y abrir el archivo `inicio.html` en tu navegador.
 
+### Backend para el formulario de contacto
+
+Hemos implementado un backend en Node.js para manejar el formulario de contacto en `consultas.html`. Este backend permite enviar correos electrónicos con las consultas realizadas por los usuarios.
+
 ## 🛠️ Tecnologías usadas
 
 - HTML5
 - CSS3
-- JS 
+- JavaScript 
+- Node.js
+- Express
+- Node.js
 
 ## 📁 Estructura del proyecto
 
@@ -39,6 +46,8 @@ Podés acceder directamente desde GitHub Pages o descargar el código y abrir el
 - consultas.html # Formulario de contacto / consultas
 - style.css # Hoja de estilos principal
 - script.js # Script JavaScript (efectos, validaciones, etc.)
+- server.js # Backend para manejar el formulario de contacto
+- mail.json # Archivo de configuración para credenciales de correo
 - /logos # Logos e íconos del equipo o sitio
   - logo.png
 - /trabajos # Imágenes de los trabajos realizados
