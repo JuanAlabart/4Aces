@@ -6,8 +6,27 @@
   <title>4 Aces Data Solutions</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Menú superior -->
+
+ <!-- Menú superior -->
+  <!--  <header class="topbar">
+      <div class="topbar-left">
+        <button id="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+        <a href="inicio.html">
+          <img src="logos/logo.png" alt="Logo" class="logo-mini" />
+        </a>
+      </div>
+        <div class="language-select-wrapper" style="margin-right: 8px;">
+          <select id="language-select" aria-label="Seleccionar idioma">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+          </select>
+          <span id="flag-inside"></span>
+        </div>
+        <button id="chatbot-button" aria-label="Abrir chatbot">💬</button>
+    </div>
+  </header>-->
   <header class="topbar">
     <div class="topbar-left">
       <button id="menu-toggle" aria-label="Abrir menú">&#9776;</button>
@@ -15,6 +34,16 @@
         <img src="logos/logo.png" alt="Logo" class="logo-mini" />
       </a>
     </div>
+    <div class="topbar-right">
+    <label class="switch-theme" title="Cambiar modo">
+  <input type="checkbox" id="theme-toggle" />
+  <span class="slider">
+    <img src="logos/moon-off.svg" alt="Luna" class="icon-moon" id="moon-icon" />
+    <span class="toggle-ball"></span>
+    <img src="logos/sun-off.svg" alt="Sol" class="icon-sun" id="sun-icon" />
+  </span>
+</label>
+  </div>
   </header>
 
   <!-- Menú lateral -->

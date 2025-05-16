@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // MENÚ HAMBURGUESA
+document.addEventListener('DOMContentLoaded', function() {
+// MENÚ HAMBURGUESA
   const menuToggle = document.getElementById('menu-toggle');
   const sidebar = document.getElementById('sidebar');
 
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.hash = '';
     }
   });
-
+  
   // TOGGLE CARDS
   const cardContainer = document.querySelector('.trabajos');
   if (cardContainer) {
@@ -188,4 +188,36 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+    const moonIcon = document.getElementById('moon-icon');
+    const sunIcon = document.getElementById('sun-icon');
+
+    function setTheme(dark) {
+      document.body.classList.toggle('dark-mode', dark);
+      document.body.classList.toggle('light-mode', !dark);
+      themeToggle.checked = dark;
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+      // Cambia los íconos según el estado
+      if (dark) {
+        moonIcon.src = 'logos/moon-on.svg';
+        sunIcon.src = 'logos/sun-off.svg';
+      } else {
+        moonIcon.src = 'logos/moon-off.svg';
+        sunIcon.src = 'logos/sun-on.svg';
+      }
+    }
+
+    // Inicializar tema
+    if (savedTheme) {
+      setTheme(savedTheme === 'dark');
+    } else {
+      setTheme(prefersDark);
+    }
+
+    themeToggle.addEventListener('change', () => {
+      setTheme(themeToggle.checked);
+    });
 });

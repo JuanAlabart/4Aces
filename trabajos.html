@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Menú superior -->
+ <!-- Menú superior -->
   <header class="topbar">
     <div class="topbar-left">
       <button id="menu-toggle" aria-label="Abrir menú">&#9776;</button>
@@ -15,6 +15,16 @@
         <img src="logos/logo.png" alt="Logo" class="logo-mini" />
       </a>
     </div>
+    <div class="topbar-right">
+    <label class="switch-theme" title="Cambiar modo">
+  <input type="checkbox" id="theme-toggle" />
+  <span class="slider">
+    <img src="logos/moon-off.svg" alt="Luna" class="icon-moon" id="moon-icon" />
+    <span class="toggle-ball"></span>
+    <img src="logos/sun-off.svg" alt="Sol" class="icon-sun" id="sun-icon" />
+  </span>
+</label>
+  </div>
   </header>
 
   <!-- Menú lateral -->
