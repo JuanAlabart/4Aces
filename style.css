@@ -257,9 +257,9 @@ section {
   position: fixed;
   bottom: 80px;
   right: 20px;
-  width: 300px;
-  height: auto;
-  max-height: 400px;
+  width: 370px;           /* Aumenta el ancho */
+  min-height: 340px;      /* Aumenta la altura mínima */
+  max-height: 520px;      /* Aumenta la altura máxima */
   background-color: var(--bg-dark);
   border: 2px solid var(--chbt-f3);
   border-radius: 10px;
@@ -315,25 +315,36 @@ section {
   background-color: var(--bg-dark);
   color: var(--text-light);
   font-size: 14px;
+  max-height: 180px;
+  margin-bottom: 8px;
 }
 
 .message {
-  margin-bottom: 10px;
-  padding: 8px 10px;
-  border-radius: 8px;
-  max-width: 80%;
+  margin: 4px 0;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 0.97em;
+  max-width: 90%;
+  word-break: break-word;
 }
 
 .message.bot {
-  background-color: var(--chbt-f1);
-  color: var(--black);
+  background: var(--bg-darker, #1a1a1a);
+  color: var(--text-light, #f0f0f0);
   align-self: flex-start;
+  margin-right: auto;
+  border: 1px solid var(--primary-accent-light, #aaf6ff);
+  box-shadow: 0 1px 4px var(--shadow-dark);
 }
 
 .message.user {
-  background-color: var(--chbt-f2);
+  background: var(--primary-accent, #00cfff);
   color: var(--black);
   align-self: flex-end;
+  margin-left: auto;
+  font-weight: bold;
+  border: 1.5px solid var(--primary-1, #0fe9d8);
+  box-shadow: 0 2px 8px var(--shadow-light);
 }
 
 #chatbot-form {
@@ -369,6 +380,41 @@ section {
 
 #chatbot-form button:hover {
   background-color: var(--chbt-f1);
+}
+
+.chatbot-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 0 0;
+  justify-content: flex-start;
+}
+
+.chatbot-question {
+  background: var(--primary-accent, #0077B5);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 6px 14px;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 0;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.chatbot-question:hover {
+  background: var(--primary-accent-dark, #005983);
+}
+
+@media (max-width: 500px) {
+  #chatbot-popup {
+    width: 98vw;
+    right: 1vw;
+    min-height: 220px;
+    max-height: 90vh;
+  }
 }
 
 /* FORMULARIO CONSULTAS */

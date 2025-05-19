@@ -19,9 +19,15 @@ document.addEventListener('DOMContentLoaded', function() {
   const chatbotButton = document.getElementById('chatbot-button');
   const chatbotPopup = document.getElementById('chatbot-popup');
   const closeChatbot = document.querySelector('.chatbot-header button');
-  const chatbotForm = document.getElementById('chatbot-form');
-  const chatbotInput = document.getElementById('chatbot-input');
   const chatbotMessages = document.querySelector('.chatbot-messages');
+  const chatbotQuestions = document.querySelectorAll('.chatbot-question');
+  const chatbotQuestionsContainer = document.getElementById('chatbot-questions');
+
+  function showMainMenu() {
+    chatbotQuestionsContainer.style.display = 'flex';
+    const volverBtn = document.getElementById('chatbot-volver');
+    if (volverBtn) volverBtn.remove();
+  }
 
   // Abrir o cerrar el popup al hacer clic en el botón del chatbot
   chatbotButton.addEventListener('click', () => {
@@ -37,42 +43,51 @@ document.addEventListener('DOMContentLoaded', function() {
     chatbotPopup.classList.remove('open');
   });
 
-  // Enviar mensaje
-  chatbotForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const userMessage = chatbotInput.value.trim();
-    if (userMessage) {
-      addMessage(userMessage, 'user');
-      chatbotInput.value = '';
-      setTimeout(() => {
-        const botResponse = getBotResponse(userMessage);
-        addMessage(botResponse, 'bot');
-      }, 500);
-    }
+  chatbotQuestions.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Mostrar pregunta del usuario
+      const userMsg = document.createElement('div');
+      userMsg.className = 'message user';
+      userMsg.textContent = this.textContent;
+      chatbotMessages.appendChild(userMsg);
+
+      // Mostrar respuesta del bot
+      const botMsg = document.createElement('div');
+      botMsg.className = 'message bot';
+
+      switch (this.textContent) {
+        case '¿Qué servicios ofrecen?':
+          botMsg.textContent = 'Ofrecemos análisis de datos, optimización de procesos, dashboards y modelos predictivos.';
+          break;
+        case '¿Quiénes forman el equipo?':
+          botMsg.textContent = 'Nuestro equipo está formado por 4 especialistas en datos, automatización y desarrollo web.';
+          break;
+        case '¿Cómo puedo contactarlos?':
+          botMsg.textContent = 'Puedes contactarnos desde la sección Consultas o por LinkedIn.';
+          break;
+        case '¿Qué herramientas usan?':
+          botMsg.textContent = 'Usamos Power BI, Python, SQL y Trello para nuestros proyectos.';
+          break;
+        default:
+          botMsg.textContent = '¡Pregunta no reconocida!';
+      }
+
+      chatbotMessages.appendChild(botMsg);
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+
+      // Oculta las preguntas y muestra el botón volver
+      chatbotQuestionsContainer.style.display = 'none';
+      if (!document.getElementById('chatbot-volver')) {
+        const volverBtn = document.createElement('button');
+        volverBtn.id = 'chatbot-volver';
+        volverBtn.textContent = 'Volver al menú';
+        volverBtn.className = 'chatbot-question';
+        volverBtn.style.marginTop = '12px';
+        volverBtn.onclick = showMainMenu;
+        chatbotQuestionsContainer.parentNode.appendChild(volverBtn);
+      }
+    });
   });
-
-  // Agregar mensaje al chat
-  function addMessage(text, sender) {
-    const message = document.createElement('div');
-    message.classList.add('message', sender);
-    message.textContent = text;
-    chatbotMessages.appendChild(message);
-    chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Desplazar hacia abajo
-  }
-
-  // Respuestas automáticas simples
-  function getBotResponse(message) {
-    const lowerMessage = message.toLowerCase();
-    if (lowerMessage.includes('hola')) {
-      return '¡Hola! ¿Cómo puedo ayudarte?';
-    } else if (lowerMessage.includes('precio')) {
-      return 'Nuestros precios varían según el servicio. ¿Qué necesitas?';
-    } else if (lowerMessage.includes('gracias')) {
-      return '¡De nada! 😊';
-    } else {
-      return 'Lo siento, no entiendo tu mensaje. ¿Puedes reformularlo?';
-    }
-  }
 
   // CARRUSEL
   const carousels = document.querySelectorAll('.carousel');
@@ -243,8 +258,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.topbar-left a').addEventListener('click', function(e) {
     e.preventDefault();
     showIntroOverlay();
-      setTimeout(() => {
-    window.location.href = this.href;
-  }, 700); // Espera la animación antes de navegar
+      setTimeout(() => {window.location.href = this.href;}, 700); // Espera la animación antes de navegar
     });
 });
