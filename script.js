@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
     showIntroOverlay();
 
     
-    // Al hacer click en el logo de la topbar, mostrar animación de nuevo
+    // Al hacer click en el logo de la topbar, mostrar animación de nuevo 
     document.querySelector('.topbar-left a').addEventListener('click', function(e) {
     e.preventDefault();
     showIntroOverlay();
