@@ -220,4 +220,31 @@ document.addEventListener('DOMContentLoaded', function() {
     themeToggle.addEventListener('change', () => {
       setTheme(themeToggle.checked);
     });
+
+
+    function showIntroOverlay() {
+      const overlay = document.getElementById('intro-overlay');
+      overlay.classList.remove('hide');
+    }
+    
+    function hideIntroOverlay() {
+      const overlay = document.getElementById('intro-overlay');
+      overlay.classList.add('hide');
+    }
+    
+    // Ocultar overlay al hacer click
+    document.getElementById('intro-overlay').addEventListener('click', hideIntroOverlay);
+    
+    // Mostrar overlay al cargar la página (siempre)
+    showIntroOverlay();
+
+    
+    // Al hacer click en el logo de la topbar, mostrar animación de nuevo
+    document.querySelector('.topbar-left a').addEventListener('click', function(e) {
+    e.preventDefault();
+    showIntroOverlay();
+      setTimeout(() => {
+    window.location.href = this.href;
+  }, 700); // Espera la animación antes de navegar
+    });
 });

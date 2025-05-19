@@ -22,7 +22,7 @@
   --text-medium: #cccccc;
   --text-dark: #232323;
   --text-muted: #aaaaaa;
-  --text-muted-dark: #555;
+  --text-muted-dark: #0fe9d8;
   --text-accent: #00cfff;
   --text-title: #0fe9d8;        /* Títulos destacados */
 
@@ -41,24 +41,28 @@
 
   --highlight: #ffd700;
   --switch-celeste: #00cfff;
+
+  --chbt-f1: #0fe9d8;
+  --chbt-f2: #19def4;
+  --chbt-f3: #04f9b0;
 }
 
 body.light-mode {
   --bg-darkest: #0fe9d8;         /* Fondo general, color primario 1 */
   --bg-dark: #19def4;            /* Fondo principal, color primario 2 */
-  --bg-darker: #04f9b0;          /* Fondo header/sidebar, color primario 3 */
-  --bg-medium: #0bf4c4;          /* Fondo inputs/cards alternativos, color primario 4 */
+  --bg-darker: #04f9d8;          /* Fondo header/sidebar, color primario 3 */
+  --bg-medium: #0be4f4;          /* Fondo inputs/cards alternativos, color primario 4 */
   --bg-light: #ffffff;           /* Fondo puro para tarjetas y áreas destacadas */
   --bg-lighter: #aaf6ff;         /* Fondo muy claro para detalles/acento */
   --bg-card: #ffffff;            /* Fondo tarjetas */
   --bg-card-alt: #e0f7fa;        /* Fondo tarjetas alternativo, pastel celeste */
 
   --text-light: #232323;         /* Texto principal oscuro */
-  --text-medium: #0c758d;        /* Texto secundario, branding oscuro */
+  --text-medium: #303131;        /* Texto secundario, branding oscuro */
   --text-dark: #000000;          /* Títulos o acentos, negro */
-  --text-muted: #369999;         /* Texto menos importante, branding pastel oscuro */
-  --text-muted-dark: #0c758d;    /* Texto muy tenue, branding oscuro */
-  --text-accent: #00cfff;        /* Acentos */
+  --text-muted: #242929;         /* Texto menos importante, branding pastel oscuro */
+  --text-muted-dark: #092127;    /* Texto muy tenue, branding oscuro */
+  --text-accent: #323f42;        /* Acentos */
   --text-title: #232323;         /* Títulos destacados */
 
   --border-light: #aaf6ff;       /* Bordes suaves, celeste claro */
@@ -76,6 +80,10 @@ body.light-mode {
 
   --highlight: #0c758d;           /* Detalles destacados */
   --switch-celeste: #00cfff;      /* Switch modo claro */
+
+  --chbt-f1: #0fe9d8;
+  --chbt-f2: #000000;
+  --chbt-f3: #04f9b0;
 }
 
 /* RESET GENERAL */
@@ -111,7 +119,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid var(--primary-1);
+  border-bottom: 1px solid var(--text-title);
 }
 
 header img.logo {
@@ -194,7 +202,7 @@ header img.logo {
 }
 
 .sidebar a:hover {
-  background-color: var(--primary-1);
+  background-color: var(--text-title);
   color: var(--black);
   transform: scale(1.05);
 }
@@ -234,7 +242,7 @@ section {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: var(--primary-2);
+  background: var(--chbt-f1);
   color: var(--black);
   border: none;
   border-radius: 50%;
@@ -242,7 +250,7 @@ section {
   font-size: 24px;
   cursor: pointer;
   z-index: 1001;
-  box-shadow: 0 0 10px var(--primary-2);
+  box-shadow: 0 0 10px var(--chbt-f2);
 }
 
 #chatbot-popup {
@@ -253,7 +261,7 @@ section {
   height: auto;
   max-height: 400px;
   background-color: var(--bg-dark);
-  border: 2px solid var(--primary-3);
+  border: 2px solid var(--chbt-f3);
   border-radius: 10px;
   display: none;
   flex-direction: column;
@@ -275,14 +283,14 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--primary-1);
+  background-color: var(--chbt-f1);
   color: var(--black);
   padding: 10px;
   border-radius: 10px 10px 0 0;
 }
 
 .chatbot-header button {
-  background-color: var(--primary-3);
+  background-color: var(--chbt-f3);
   color: var(--black);
   border: none;
   border-radius: 50%;
@@ -297,7 +305,7 @@ section {
 }
 
 .chatbot-header button:hover {
-  background-color: var(--primary-1);
+  background-color: var(--chbt-f1);
 }
 
 .chatbot-messages {
@@ -317,13 +325,13 @@ section {
 }
 
 .message.bot {
-  background-color: var(--primary-1);
+  background-color: var(--chbt-f1);
   color: var(--black);
   align-self: flex-start;
 }
 
 .message.user {
-  background-color: var(--primary-2);
+  background-color: var(--chbt-f2);
   color: var(--black);
   align-self: flex-end;
 }
@@ -349,7 +357,7 @@ section {
 }
 
 #chatbot-form button {
-  background-color: var(--primary-3);
+  background-color: var(--chbt-f3);
   color: var(--black);
   border: none;
   border-radius: 6px;
@@ -360,7 +368,7 @@ section {
 }
 
 #chatbot-form button:hover {
-  background-color: var(--primary-1);
+  background-color: var(--chbt-f1);
 }
 
 /* FORMULARIO CONSULTAS */
@@ -395,7 +403,7 @@ form button {
 }
 
 form button:hover {
-  background-color: var(--primary-1);
+  background-color: var(--text-title);
 }
 
 /* FOOTER */
@@ -452,10 +460,10 @@ footer {
 
 .card h3 {
   font-size: 1.8rem;
-  color: var(--primary-1);
+  color: var(--text-muted-dark);
   text-transform: uppercase;
   margin-bottom: 15px;
-  border-bottom: 2px solid var(--primary-1);
+  border-bottom: 2px solid var(--text-title);
   padding-bottom: 5px;
 }
 
@@ -485,7 +493,7 @@ footer {
 /* Botón para expandir/contraer las tarjetas */
 .toggle-card {
   background: none;
-  color: var(--primary-1);
+  color: var(--text-title);
   border: none;
   padding: 5px;
   cursor: pointer;
@@ -551,7 +559,7 @@ footer {
 }
 
 .carousel-btn:hover {
-  background-color: var(--primary-1);
+  background-color: var(--text-title);
   color: var(--black);
 }
 
@@ -605,7 +613,7 @@ footer {
 }
 
 .lightbox-btn:hover {
-  color: var(--primary-1);
+  color: var(--text-title);
 }
 
 .prev-lightbox {
@@ -686,7 +694,7 @@ footer {
 
 .consulta-info h3 {
   margin-bottom: 15px;
-  color: var(--primary-1);
+  color: var(--text-muted-dark);
 }
 
 .consulta-info p {
@@ -710,7 +718,7 @@ footer {
 
 .equipo h1 {
   margin-bottom: 20px;
-  color: var(--primary-1);
+  color: var(--text-title);
 }
 
 .equipo p {
@@ -718,22 +726,8 @@ footer {
   color: var(--text-muted);
 }
 
-.equipo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
 
 /* Tarjetas de equipo */
-.equipo-card {
-  background-color: var(--bg-dark);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px var(--shadow-dark);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 .equipo-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px var(--shadow-darker);
@@ -750,7 +744,7 @@ footer {
 
 .equipo-card h3 {
   margin-bottom: 10px;
-  color: var(--primary-1);
+  color: var(--text-muted-dark);
   font-size: 1.5em;
 }
 
@@ -798,7 +792,7 @@ footer {
 
 .card h3 {
   margin-bottom: 10px;
-  color: var(--primary-1);
+  color: var(--text-muted-dark);
   font-size: 1.5em;
 }
 
@@ -818,10 +812,10 @@ footer {
 
 .titulo-trabajos {
   font-size: 2.5em;
-  color: var(--primary-1);
+  color: var(--text-title);
   text-transform: uppercase;
   margin-bottom: 20px;
-  border-bottom: 3px solid var(--primary-1);
+  border-bottom: 3px solid var(--text-title);
   display: inline-block;
   padding-bottom: 10px;
 }
@@ -887,4 +881,127 @@ footer {
 .switch-theme input:checked + .slider .toggle-ball {
   left: 26px;
   background: var(--text-dark);
+}
+
+/* Animación de overlay de inicio mejorada */
+.intro-overlay {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: linear-gradient(120deg, #0c758d 0%, #00cfff 100%);
+  background-size: 200% 200%;
+  animation: gradient-move 3s ease-in-out infinite alternate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1);
+  opacity: 1;
+}
+
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.intro-overlay.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+.intro-logo {
+  max-width: 55vw;
+  max-height: 55vh;
+  animation: logo-zoom-in 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.25), 0 1.5px 8px 0 #00cfff;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.12);
+  padding: 24px;
+}
+
+.intro-overlay.hide .intro-logo {
+  animation: logo-fade-out 0.7s forwards;
+}
+
+@keyframes logo-zoom-in {
+  0% { transform: scale(0.7) rotate(-8deg); opacity: 0; }
+  60% { transform: scale(1.08) rotate(3deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes logo-fade-out {
+  0% { opacity: 1; transform: scale(1) rotate(0deg);}
+  100% { opacity: 0; transform: scale(0.85) rotate(-8deg);}
+}
+
+/* Mejoras para el título de equipo */
+.equipo-titulo {
+  font-size: 2.6em;
+  color: var(--primary-accent, #00cfff);
+  margin-bottom: 0.2em;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px rgba(0,127,255,0.08);
+}
+
+.equipo-separador {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #0c758d 0%, #00cfff 100%);
+  border: none;
+  border-radius: 2px;
+  margin: 0 auto 18px auto;
+  opacity: 0.8;
+}
+
+.equipo-subtitulo {
+  color: var(--text-muted-dark, #444);
+  font-size: 1.2em;
+  margin-bottom: 36px;
+}
+
+/* Icono LinkedIn en tarjetas de equipo */
+.linkedin-link {
+  display: inline-block;
+  margin-top: 12px;
+  transition: transform 0.2s;
+}
+.linkedin-link:hover {
+  transform: scale(1.12) rotate(-4deg);
+  filter: brightness(1.2);
+}
+
+/* Grid para las tarjetas del equipo */
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas fijas */
+  gap: 28px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  justify-items: center;
+}
+
+/* Tarjetas de equipo */
+.equipo-card {
+  background-color: var(--bg-dark);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-dark);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 260px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .equipo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .equipo-grid {
+    grid-template-columns: 1fr;
+  }
 }
