@@ -48,9 +48,9 @@
 }
 
 body.light-mode {
-  --bg-darkest: #0fe9d8;         /* Fondo general, color primario 1 */
-  --bg-dark: #19def4;            /* Fondo principal, color primario 2 */
-  --bg-darker: #04f9d8;          /* Fondo header/sidebar, color primario 3 */
+  --bg-darkest: #0c758d;         /* Fondo general, color primario 1 */
+  --bg-dark: #00cfff;            /* Fondo principal, color primario 2 */
+  --bg-darker: #00e3f3;          /* Fondo header/sidebar, color primario 3 */
   --bg-medium: #0be4f4;          /* Fondo inputs/cards alternativos, color primario 4 */
   --bg-light: #ffffff;           /* Fondo puro para tarjetas y áreas destacadas */
   --bg-lighter: #aaf6ff;         /* Fondo muy claro para detalles/acento */
@@ -703,7 +703,7 @@ footer {
 }
 
 .consulta-info img {
-  max-width: 100%;
+  max-width: 70%;
   border-radius: 10px;
   box-shadow: 0 4px 8px var(--shadow-dark);
 }
