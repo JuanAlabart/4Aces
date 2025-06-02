@@ -232,9 +232,13 @@ section {
   color: var(--text-muted);
 }
 
+/* Logo principal responsive */
 .logo-principal {
-  width: 400px;
+  max-width: 320px;
+  width: 90vw;
   height: auto;
+  display: block;
+  margin: 0 auto 18px auto;
 }
 
 /* CHATBOT POP-UP */
@@ -1054,5 +1058,37 @@ footer {
 @media (max-width: 600px) {
   .equipo-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Menú lateral y topbar más grandes en móvil */
+@media (max-width: 600px) {
+  .logo-principal {
+    max-width: 180px;
+    width: 80vw;
+    margin-bottom: 10px;
+  }
+
+  .sidebar {
+    width: 80vw;
+    min-width: 180px;
+    font-size: 1.1em;
+  }
+
+  .sidebar ul {
+    padding: 0 10px;
+  }
+
+  .sidebar li {
+    margin-bottom: 18px;
+  }
+
+  .topbar {
+    font-size: 1.1em;
+    padding: 10px 8px;
+  }
+
+  .topbar .logo-mini {
+    max-width: 38px;
   }
 }
