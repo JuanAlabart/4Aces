@@ -1070,9 +1070,8 @@ footer {
   }
 
   .sidebar {
-    width: 80vw;
-    min-width: 180px;
-    font-size: 1.1em;
+    width: 80vw; /* Ajusta el ancho del menú en móvil */
+    font-size: 1.1em; /* Aumenta el tamaño de las letras */
   }
 
   .sidebar ul {
@@ -1083,12 +1082,7 @@ footer {
     margin-bottom: 18px;
   }
 
-  .topbar {
-    font-size: 1.1em;
-    padding: 10px 8px;
-  }
-
-  .topbar .logo-mini {
-    max-width: 38px;
+  .sidebar a {
+    font-size: 1em; /* Ajusta el tamaño de los enlaces */
   }
 }
